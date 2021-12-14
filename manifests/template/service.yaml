@@ -6,10 +6,9 @@ metadata:
     harness.io/skip-versioning: "true"
     harness.io/direct-apply: "true"    
 spec:
-  type: {{.Values.serviceType}}
-  ports:
-    - port: {{.Values.servicePort}}
-      targetPort: {{.Values.serviceTargetPort}}
-      protocol: TCP
   selector:
-    app: {{.Values.name}}
+    app: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
