@@ -1,14 +1,20 @@
+
+
+
 apiVersion: v1
-kind: Service
-metadata:
-  name: tathagat-bug-test-kubertest-yaml-svc
-  annotations: 
-    harness.io/skip-versioning: "true"
-    harness.io/direct-apply: "true"    
-spec:
-  selector:
-    app: MyApp
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
+items:
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: tathagat-bug-test-kubertest-yaml-svc
+      annotations: 
+        harness.io/skip-versioning: "true"
+        harness.io/direct-apply: "true"    
+    spec:
+      selector:
+        app: MyApp
+      ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 9376
+kind: List
