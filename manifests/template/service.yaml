@@ -5,6 +5,9 @@ items:
   kind: Service
   metadata:
     name: my-service-1
+    labels:
+      environment: true
+      app: nginx    
   spec:
     selector:
       app: MyApp1
@@ -17,7 +20,7 @@ items:
   metadata:
     name: my-service-2
     labels:
-      environment: production
+      environment: 100
       app: nginx
     annotations:
       harness.io/skip-versioning: "true"
