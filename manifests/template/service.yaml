@@ -3,7 +3,7 @@ items:
   - apiVersion: v1
     kind: Service
     metadata:
-      name: tathagat-bug-test-svc-with-labels
+      name: tathagat-bug-test-svc-without-quotes
       labels:
         environment: production
         app: nginx      
